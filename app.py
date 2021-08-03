@@ -1,14 +1,10 @@
 import streamlit as st
 import sqlite3
 import pandas as pd
-import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from email.mime.base import MIMEBase
 from email import encoders
-import gspread
-from oauth2client.service_account import ServiceAccountCredentials
-from pprint import pprint
 import datetime
 time = datetime.datetime.now()
 import pywhatkit as py
