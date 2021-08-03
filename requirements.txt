@@ -2,3 +2,4 @@ pandas
 scrapy
 googlesearch-python
 streamlit
+pywhatkit
