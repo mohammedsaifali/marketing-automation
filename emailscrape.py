@@ -12,8 +12,8 @@ def get_urls(tag, n, language):
     for i in range (n):
         urls = search(tag, num_results=i, lang=language)
     return urls
-def ask_user(question):
-    response = st.radio(question,['Yes','No'])
+def ask_user():
+    response = 'Yes'
     if response == 'Yes':
         return True
     else:
@@ -21,7 +21,7 @@ def ask_user(question):
 def create_file(path):
     response = False
     if os.path.exists(path):
-        response = ask_user('File already exists, replace?')
+        response = ask_user()
         if response == False: return 
     
     with open(path, 'wb') as file: 
@@ -75,4 +75,3 @@ def get_info(tag, n, language, path, reject=[]):
     df.to_csv(path, mode='w', header=True)
     
     return df
-
